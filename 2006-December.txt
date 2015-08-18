@@ -1,0 +1,73 @@
+From hecrogon at gmail.com  Fri Dec 29 11:24:49 2006
+From: hecrogon at gmail.com (=?ISO-8859-1?Q?H=E9ctor_Rojas_Gonz=E1lez?=)
+Date: Fri, 29 Dec 2006 10:24:49 +0000
+Subject: [Castleportal-devel] Bugs
+Message-ID: <dccacc140612290224u7a53cd22x4115051258d1d56b@mail.gmail.com>
+
+Hello
+There are a bug with the users and groups management. One user can't be
+member of various groups. The problems is in the model Groups.cs in the
+property Users caused by The (Cascade = ManyRelationCascadeEnum.SaveUpdate).
+Other question. Why in Groups and Models use ISet? Why is better than IList?
+Maybe ISet cause also the previous problem.
+
+And finally, i can't download the svn. I do this
+svn checkout
+svn+ssh://hector at svn.berlios.de/svnroot/repos/castleportal/trunk
+
+request me the password, i write it, but request again the password and
+don't download anything
+The password is correct. I can login in berlios without problems. Anybody
+know that happen?
+
+
+Thank
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: <https://lists.berlios.de/pipermail/castleportal-devel/attachments/20061229/fc722e8e/attachment.html>
+
+From carlosble at shidix.com  Sat Dec 30 19:20:12 2006
+From: carlosble at shidix.com (carlosble at shidix.com)
+Date: Sat, 30 Dec 2006 19:20:12 +0100
+Subject: [Castleportal-devel] Bugs
+Message-ID: <20061230192012.kx1j107c8ow8cgsg@shidix.com>
+
+Hi!
+         I can't reproduce the problem, since I really can add an user  
+to several
+         groups. ISet is actually the right way for the relationship  
+among users
+         and groups, because the user/group must'n be repeated along the list.
+         Berlios svn sometimes fails so it shows you an "invalid password"
+         message as you try to check out the svn. Try again for a few times, it
+         should work. I think that they have some bandwith problems.
+         I have no so good internet connection these days, sorry for any
+         inconvenience.
+         Good luck.
+
+
+
+         El vie, 29-12-2006 a las 10:24 +0000, H?ctor Rojas Gonz?lez escribi?:
+         > Hello
+         > There are a bug with the users and groups management. One user can't
+         > be member of various groups. The problems is in the model  
+Groups.cs in
+         > the property Users caused by The (Cascade =
+         > ManyRelationCascadeEnum.SaveUpdate ).
+         > Other question. Why in Groups and Models use ISet? Why is  
+better than
+         > IList? Maybe ISet cause also the previous problem.
+         >
+         > And finally, i can't download the svn. I do this
+         > svn checkout svn
+         > +ssh://hector at svn.berlios.de/svnroot/repos/castleportal/trunk
+         >
+         > request me the password, i write it, but request again the password
+         > and don't download anything
+         > The password is correct. I can login in berlios without problems.
+         > Anybody know that happen?
+         >
+         >
+         > Thank
+
+
